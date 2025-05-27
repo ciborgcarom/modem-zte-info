@@ -23,7 +23,7 @@ Automatizar a coleta de informações detalhadas de modems ZTE conectados à red
 ## Instalação
 
 ```bash
-git clone https://github.com/seu-usuario/modem-zte-info.git
+git clone https://github.com/ciborgcarom/modem-zte-info.git
 cd modem-zte-info
 npm install
 ```
@@ -34,7 +34,7 @@ Crie um arquivo `.env` na raiz do projeto com as variáveis abaixo:
 
 ```env
 # Lista de IPs possíveis do modem, separados por vírgula
-MODEM_IPS=192.168.0.1,192.168.1.1,192.168.8.1
+MODEM_IPS=192.168.0.1,192.168.1.1
 
 # Senha de acesso ao modem (padrão: vivo)
 MODEM_PASSWORD=vivo
