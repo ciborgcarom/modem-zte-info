@@ -1,4 +1,4 @@
-# ZTE Modem Info API
+# Modem ZTE - Info API
 
 API e CLI para extração automatizada de informações de modems ZTE via interface web, utilizando Puppeteer.
 
@@ -23,8 +23,8 @@ Automatizar a coleta de informações detalhadas de modems ZTE conectados à red
 ## Instalação
 
 ```bash
-git clone https://github.com/seu-usuario/zte-info.git
-cd zte-info
+git clone https://github.com/seu-usuario/modem-zte-info.git
+cd modem-zte-info
 npm install
 ```
 
