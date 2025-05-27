@@ -22,7 +22,8 @@ class PuppeteerBrowserService {
     launch() {
         return __awaiter(this, void 0, void 0, function* () {
             const headless = process.env.PUPPETEER_HEADLESS === 'true';
-            this.browser = yield puppeteer_1.default.launch({ headless });
+            const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+            this.browser = yield puppeteer_1.default.launch(Object.assign({ headless }, (executablePath ? { executablePath } : {})));
             this.page = yield this.browser.newPage();
         });
     }

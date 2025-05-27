@@ -7,7 +7,11 @@ export class PuppeteerBrowserService implements IBrowserService {
 
   async launch(): Promise<void> {
     const headless = process.env.PUPPETEER_HEADLESS === 'true';
-    this.browser = await puppeteer.launch({ headless });
+    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+    this.browser = await puppeteer.launch({ 
+      headless,
+      ...(executablePath ? { executablePath } : {})
+    });
     this.page = await this.browser.newPage();
   }
 
