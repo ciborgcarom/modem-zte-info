@@ -10,7 +10,15 @@ export class PuppeteerBrowserService implements IBrowserService {
     const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
     this.browser = await puppeteer.launch({ 
       headless,
-      ...(executablePath ? { executablePath } : {})
+      ...(executablePath ? { executablePath } : {}),
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-gpu',
+        '--single-process',
+        '--no-zygote',
+        '--disable-dev-shm-usage'
+      ]
     });
     this.page = await this.browser.newPage();
   }
